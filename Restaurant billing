@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Food Hub</title>
+    <style media="screen">
+      #leftbox {
+        float:left;
+        width:25%;
+        height:500px;
+
+      }
+      #middlebox{
+        float:left;
+        width:25%;
+        height:500px;
+
+      }
+      #rightbox{
+        float:left;
+        width:25%;
+        height:500px;
+
+      }
+      #bill
+      {
+        float:left;
+        width:10%;
+        height:500px;
+      }
+      body{
+        background-image:url('http://buysellgraphic.com/images/graphic_preview/large/lifestyle_background_restaurant_dating_theme_cartoon_design_38238.jpg');
+      background-size:cover
+      }
+      div,select{
+        font-family:courier;
+        font-size:19px;
+      }
+      button{
+        font-family:algerian;
+        border:orange 5px solid;
+        font-size:20px;
+      }
+      hr{
+        height:2px;
+        background:black;
+      }
+      .noe{
+
+        font-family:serif;
+      }
+      span{
+        color:red;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to Tara Maa , Online Food Ordering Hub</h1>
+    <h3>Check our best Dishes Now !</h3>
+    <hr>
+    <div id="leftbox">
+      <h4>Major Dishes Available :</h4>
+      <input type="checkbox" id="md1" name="Curry Chicken">Curry Chicken<br>
+      <input type="checkbox" id="md2" name="Matar Paneer">Matar Paneer<br>
+      <input type="checkbox" id="md3" name="Kadhai Paneer">Kadhai Paneer<br>
+      <input type="checkbox" id="md4" name="Nan/Roti">Nan/Roti<br>
+      <input type="checkbox" id="md5" name="Veg Thali">Veg Thali<br>
+      <input type="checkbox" id="md6" name="Mixed Veg">Mixed Veg<br>
+      <input type="checkbox" id="md7" name="Panner DoPayaza">Panner DoPayaza<br>
+    </div>
+    <div id="middlebox">
+      <h4>Starters Available :</h4>
+      <input type="checkbox" id="s1" name="Dragon Paneer">Dragon Paneer<br>
+      <input type="checkbox" id="s2" name="Ramba Chicken">Ramba Chicken<br>
+      <input type="checkbox" id="s3" name="Chicken Lollipop">Chicken Lollipop<br>
+      <input type="checkbox" id="s4" name="Kofta">Kofta<br>
+      <input type="checkbox" id="s5" name="Paneer Chilli">Paneer Chilli<br>
+      <input type="checkbox" id="s6" name="Manchurian">Manchurian<br>
+      <input type="checkbox" id="s7" name="Chowmin">Chowmin<br>
+      <br>
+      <br>
+      <button type="button" name="button" align="center" id="po">Place Order Now</button>
+      <button type="button" name="button" align="center" id="clr" onclick="document.getElementById('outp').innerHTML= emp ">Clear</button><br>
+      <div class="noe"><b>  Note <span>*</span> Price of Soft Drinks is fixed at Rs20 <br></b>
+        <p style="font-family:algerian;">Created by JATIN KUMAR  &copy;18BCB0072 </p>
+    </div>
+    </div>
+    <div id="rightbox">
+      <h4>Soft Drinks Available :</h4>
+      <select id="mySelect">
+    <option value="Coke">Coke</option>
+    <option value="Pepsi">Pepsi</option>
+    <option value="Limca">Limca</option>
+    <option value="Fanta">Fanta</option>
+  </select>
+    </div>
+    <div id="bill">
+      <h4>Bil Details:</h4>
+      <textarea name="name" rows="20" cols="40" id="outp"></textarea>
+    </div>
+    <script type="text/javascript">
+
+
+     var psd=20;
+     var emp="";
+     var pmd1=160,pmd2=150,pmd3=190,pmd4=120,pmd5=110,pmd6=135,pmd7=155;
+     var ps1=90,ps2=99,ps3=120,ps4=125,ps5=110,ps6=130,ps7=160;
+     document.getElementById("po").addEventListener("click", givebill);
+     function givebill()
+     {   var tex="";
+         var sum=0;
+       if(document.getElementById("md1").checked== true)
+       {tex=tex+ document.getElementById("md1").name + ":" + pmd1 +"\n";
+       sum=sum+pmd1;}
+       if(document.getElementById("md2").checked== true){
+         tex=tex+ document.getElementById("md2").name + ":" + pmd2 +"\n";
+         sum=sum+pmd2;
+       }
+       if(document.getElementById("md3").checked== true){
+         tex=tex+ document.getElementById("md3").name + ":" + pmd3 +"\n";
+         sum=sum+pmd3;
+       }
+     if(document.getElementById("md4").checked== true){
+       tex=tex+ document.getElementById("md4").name + ":" + pmd4 +"\n";
+        sum=sum+pmd4;
+     }
+       if(document.getElementById("md5").checked== true)
+       {
+         tex=tex+ document.getElementById("md5").name + ":" + pmd5 +"\n";
+         sum=sum+pmd5;
+       }
+       if(document.getElementById("md6").checked== true){
+         tex=tex+ document.getElementById("md6").name + ":" + pmd6 +"\n";
+         sum=sum+pmd6;
+       }
+       if(document.getElementById("md7").checked== true){
+         tex=tex+ document.getElementById("md7").name + ":" + pmd7 +"\n";
+         sum=sum+pmd7;
+       }
+
+
+
+
+       if(document.getElementById("s1").checked== true)
+       {tex=tex+ document.getElementById("md1").name + ":" + ps1 +"\n";
+       sum=sum+ps1;}
+       if(document.getElementById("s2").checked== true){
+         tex=tex+ document.getElementById("s2").name + ":" + ps2 +"\n";
+         sum=sum+ps2;
+       }
+       if(document.getElementById("s3").checked== true){
+         tex=tex+ document.getElementById("s3").name + ":" + ps3 +"\n";
+         sum=sum+ps3;
+       }
+     if(document.getElementById("s4").checked== true){
+       tex=tex+ document.getElementById("s4").name + ":" + ps4 +"\n";
+        sum=sum+ps4;
+     }
+       if(document.getElementById("s5").checked== true)
+       {
+         tex=tex+ document.getElementById("s5").name + ":" + ps5 +"\n";
+         sum=sum+ps5;
+       }
+       if(document.getElementById("s6").checked== true){
+         tex=tex+ document.getElementById("s6").name + ":" + ps6 +"\n";
+         sum=sum+ps6;
+       }
+       if(document.getElementById("s7").checked== true){
+         tex=tex+ document.getElementById("s7").name + ":" + ps7 +"\n";
+         sum=sum+ps7;
+       }
+
+       tex=tex+document.getElementById("mySelect").value+":"+psd+"\n";
+      sum=sum+psd;
+       tex="\n"+tex +"\n"+ "Total:" + sum +"\n";
+       document.getElementById("outp").innerHTML=tex;
+
+     }
+
+
+    </script>
+  </body>
+
+</html>
