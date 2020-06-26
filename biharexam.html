@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <img src="https://campusandjobs.com/wp-content/uploads/2018/02/bihar-police-696x346.jpg" height="80" width="1350"alt="">
+
+    <meta charset="utf-8">
+    <title>da1q3</title>
+    <style media="screen">
+     form{
+       background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLf_Zi7K-xbAxqr46Rt04ALghmt3nVDJR962QiN8ET6WKedJKn&s');
+       background-repeat:no-repeat;
+       background-size: 100% 100%;
+     }
+     button{
+       background-color: gray;
+
+     }
+     h3{
+       background-color:skyblue;
+     }
+     .to{
+       background-image: url('');
+     }
+    </style>
+  </head>
+  <body>
+    <h3 align="center">Welcome to Bihar Police Online Selection Examination</h3>
+   <hr>
+   <p align="center"> <b>TIME LEFT :</b> </p>
+   <div class="to" align="center" id="clockdiv"></div>
+   <form class="" action="http://jk12873.com" method="post">
+  <b>MCQ Questions:</b>  <br>
+   Q1.A 10 Kg block of Iron has which of the following twice in value in comparison to a 5 Kg block of Iron? <br>
+   <input type="radio" name="q1" value="Inertia">Inertia <br>
+   <input type="radio" name="q1" value="Mass">Mass <br>
+   <input type="radio" name="q1" value="Volume">Volume <br>
+   <input type="radio" name="q1" value="Speed">Speed<br>
+   Q2.The 'Dalong Village' covering an area of 11.35 sq. km. has recently (May 2017) been declared as Biodiversity Heritage Site under Section 37(1) of Biological Diversity Act, 2002. The village is situated in the Indian State of - <br>
+   <input type="radio" name="q2" value="Manipur">Manipur<br>
+   <input type="radio" name="q2" value="Madhya Pradesh">Madhya Pradesh <br>
+   <input type="radio" name="q2" value="Mizoram">Mizoram <br>
+   <input type="radio" name="q2" value="Delhi">Delhi <br>
+   Q3............ is the first woman to head a public sector bank. <br>
+   <input type="radio" name="q3" value="Arundhati Bhattacharya">Arundhati Bhattacharya<br>
+   <input type="radio" name="q3" value="Shikha Sharma">Shikha Sharma <br>
+   <input type="radio" name="q3" value="Usha Ananthasubramanyan">Usha Ananthasubramanyan <br>
+   <input type="radio" name="q3" value="Anya Shankar">Anya Shankar <br>
+   Q4.Where is Bose Institute ? <br>
+   <input type="radio" name="q4" value="Dispur">Dispur<br>
+   <input type="radio" name="q4" value="Kolkata">Kolkata<br>
+   <input type="radio" name="q4" value="New Delhi">New Delhi <br>
+   <input type="radio" name="q4" value="Bhopal">Bhopal<br>
+   Q5. When is the International Yoga Day celebrated ? <br>
+   <input type="radio" name="q5" value="June 21">June 21<br>
+   <input type="radio" name="q5" value="March 21">March 21<br>
+   <input type="radio" name="q5" value="Feb 23">Feb 23 <br>
+   <input type="radio" name="q5" value="Dec 27">Dec 27 <br>
+   <br>
+   <b>Write Something About You Below :</b><br>
+   <textarea name="au" rows="8" cols="80" title="Write about yourself"></textarea> <br>
+   <b> Upload Your Photo Here :</b>   <input type="file" name="pf" value=""><br>
+   <div class="" align="center">
+     <button type="button" name="button" id="textar" title="If Completed then Click Here" onclick="confirm() "> <b>Submit Now</b></button>
+   </div>
+
+   </form>
+   <script type="text/javascript">
+   var time_in_minutes = 10;
+var current_time = Date.parse(new Date());
+var deadline = new Date(current_time + time_in_minutes*60*1000);
+
+
+function time_remaining(endtime){
+var t = Date.parse(endtime) - Date.parse(new Date());
+var seconds = Math.floor( (t/1000) % 60 );
+var minutes = Math.floor( (t/1000/60) % 60 );
+var hours = Math.floor( (t/(1000*60*60)) % 24 );
+var days = Math.floor( t/(1000*60*60*24) );
+return {'total':t, 'days':days, 'hours':hours, 'minutes':minutes, 'seconds':seconds};
+}
+function run_clock(id,endtime){
+var clock = document.getElementById(id);
+function update_clock(){
+  var t = time_remaining(endtime);
+  clock.innerHTML = 'minutes: '+t.minutes+'<br>seconds: '+t.seconds;
+  if(t.minutes==0 && t.seconds==0)
+  document.getElementById('textar').style.display="none";
+  if(t.total<=0){ clearInterval(timeinterval); }
+}
+update_clock();
+var timeinterval = setInterval(update_clock,1000);
+}
+run_clock('clockdiv',deadline);
+function confirm()
+{
+  var aq1,aq2,aq3,aq4;
+
+
+  var ele = document.getElementsByName('q1');
+  var ele1 = document.getElementsByName('q2');
+  var ele2 = document.getElementsByName('q3');
+  var ele3 = document.getElementsByName('q4');
+  var ele4 = document.getElementsByName('q5');
+  var abou=document.getElementById('textar').value;
+
+            for(i = 0; i < ele.length; i++) {
+                if(ele[i].checked==true)
+                aq1=ele[i].value;}
+                for(i = 0; i < ele.length; i++) {
+                    if(ele1[i].checked==true)
+                    aq2=ele1[i].value;}
+                    for(i = 0; i < ele.length; i++) {
+                        if(ele2[i].checked==true)
+                        aq3=ele2[i].value;}
+                        for(i = 0; i < ele.length; i++) {
+                            if(ele3[i].checked==true)
+                            aq4=ele3[i].value;}
+                            for(i = 0; i < ele.length; i++) {
+                                if(ele4[i].checked==true)
+                                aq5=ele4[i].value;}
+
+ alert("Your Answers are"+"\n"+ "Q1 :" +aq1 +"\n"+ "Q2 :" +aq2 +"\n"+ "Q3 :" +aq3 +"\n"+ "Q4 :" +aq4 +"\n"+ "Q5 :" +aq5 +"\n\n"+"Do you Want to Submit Now ?");
+  alert("Answers Submitted" +"\n"+ "Thanks for taking this test");
+
+}
+
+   </script>
+  </body>
+  <footer><p style="color:green;" align="center">Created by JATIN KUMAR  &copy;18BCB0072 </p></footer>
+</html>
